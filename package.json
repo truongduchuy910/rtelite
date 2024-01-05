@@ -1,0 +1,45 @@
+{
+  "name": "rtelite",
+  "version": "1.0.1",
+  "description": "Highly customisable rich text editor",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "format": "prettier --write \"src/**/*.{ts,tsx}\"",
+    "build": "tsup",
+    "semantic-release": "semantic-release"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/truongduchuy910/RTELite.git"
+  },
+  "keywords": [
+    "rich",
+    "text",
+    "editor",
+    "next",
+    "nextjs"
+  ],
+  "author": "truongduchuy910",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/truongduchuy910/RTELite/issues"
+  },
+  "homepage": "https://github.com/truongduchuy910/RTELite#readme",
+  "devDependencies": {
+    "@semantic-release/commit-analyzer": "^11.1.0",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^9.2.3",
+    "@semantic-release/npm": "^11.0.1",
+    "@semantic-release/release-notes-generator": "^12.1.0",
+    "@types/react": "^18.2.46",
+    "prettier": "^3.1.0",
+    "semantic-release": "^22.0.8",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.2"
+  },
+  "dependencies": {
+    "react": "^18.2.0"
+  }
+}
