@@ -1,7 +1,9 @@
 .github/
-src/
+packages/
+apps/
 package-lock.json
 tsup.config.mjs
 release.config.mjs
 tsconfig.json
+turbo.json
 

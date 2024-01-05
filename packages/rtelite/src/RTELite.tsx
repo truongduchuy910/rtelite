@@ -34,6 +34,7 @@ export function RTELite(props: RTELiteProps) {
 
   return (
     <Fragment>
+      <hr />
       <Slate editor={editor} initialValue={initialValue}>
         <Editable
           renderElement={renderElement}
@@ -42,6 +43,7 @@ export function RTELite(props: RTELiteProps) {
           autoFocus
         />
       </Slate>
+      <hr />
     </Fragment>
   );
 }
