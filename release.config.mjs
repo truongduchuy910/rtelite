@@ -17,7 +17,7 @@ export default {
     [
       "@semantic-release/git",
       {
-        assets: ["package.json"],
+        assets: ["packages/rtelite/package.json"],
         message:
           "chore(release): ${nextRelease.version} 🚀\n\n${nextRelease.notes}",
       },
