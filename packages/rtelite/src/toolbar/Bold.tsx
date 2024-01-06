@@ -3,27 +3,25 @@ import { Editor, Element } from "slate";
 
 export default function ButtonBold() {
   const editor = useSlate();
+  const [weight] = Array.from(
+    Editor.nodes(editor, {
+      match: (n) => {
+        const notEditor = !Editor.isEditor(n);
+        const notElement = !Element.isElement(n);
+        return (
+          notEditor &&
+          notElement &&
+          n.tag === "strong" &&
+          n.weight === "font-bold"
+        );
+      },
+    }),
+  );
 
   const onClick = (event: any) => {
     event.preventDefault();
     const { selection } = editor;
     if (!selection) return false;
-
-    const [weight] = Array.from(
-      Editor.nodes(editor, {
-        at: Editor.unhangRange(editor, selection),
-        match: (n) => {
-          const notEditor = !Editor.isEditor(n);
-          const notElement = !Element.isElement(n);
-          return (
-            notEditor &&
-            notElement &&
-            n.tag === "strong" &&
-            n.weight === "font-bold"
-          );
-        },
-      }),
-    );
 
     if (weight) {
       editor.removeMark("weight");
@@ -42,11 +40,11 @@ export default function ButtonBold() {
         width="20"
         height="20"
         viewBox="0 0 24 24"
-        strokeWidth="2"
+        strokeWidth={weight ? ".2rem" : ".1rem"}
         stroke="#2c3e50"
         fill="none"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       >
         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
         <path d="M7 5h6a3.5 3.5 0 0 1 0 7h-6z" />

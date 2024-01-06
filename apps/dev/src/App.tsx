@@ -41,7 +41,12 @@ This is a <sup>superscript</sup> text
   return (
     <Fragment>
       <div style={{ maxWidth: 600, margin: "auto" }}>
-        <RTELite initialValue={value} />
+        <RTELite
+          initialValue={value}
+          onAstChange={(value) => {
+            console.log(value);
+          }}
+        />
       </div>
     </Fragment>
   );

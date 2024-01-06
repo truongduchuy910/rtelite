@@ -1,4 +1,15 @@
-.rtelite {
+.rtel {
+  position: relative;
+}
+
+.rtel-toolbar {
+  background: white;
+  padding: 7px 7px 3px 7px;
+  top: 8px;
+  position: sticky;
+  z-index: 11;
+}
+
+.rtel-edit:focus {
   outline: none;
-  text-align: unset;
 }

@@ -4,12 +4,12 @@ import { useSlate } from "slate-react";
 
 export default function ButtonH5() {
   const editor = useSlate();
+  const tag = "h5";
+  const [node]: any = Editor.nodes(editor, {
+    match: (n: any) => n?.tag === tag,
+  });
   const clickButton = (event: any) => {
     event.preventDefault();
-    const tag = "h5";
-    const [node]: any = Editor.nodes(editor, {
-      match: (n: any) => n?.tag === tag,
-    });
     editor.setNodes(isEmpty(node) ? { tag: tag } : { tag: "span" });
   };
   return (
@@ -20,11 +20,11 @@ export default function ButtonH5() {
         width="20"
         height="20"
         viewBox="0 0 24 24"
-        strokeWidth="2"
+        strokeWidth={node ? ".2rem" : ".1rem"}
         stroke="#2c3e50"
         fill="none"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       >
         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
         <path d="M17 18h2a2 2 0 1 0 0 -4h-2v-4h4" />
