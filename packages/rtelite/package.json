@@ -1,6 +1,6 @@
 {
   "name": "rtelite",
-  "version": "1.0.2",
+  "version": "1.0.6",
   "description": "Highly customisable rich text editor",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
