@@ -9,8 +9,8 @@
       "persistent": true
     },
     "type-check": {},
-    "rtelite#build": {
-      "dependsOn": ["rtebind#build"]
+    "rtebind#build": {
+      "dependsOn": ["rtelite#build"]
     }
   }
 }

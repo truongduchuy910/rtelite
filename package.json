@@ -4,7 +4,7 @@
   "license": "ISC",
   "private": true,
   "scripts": {
-    "build": "turbo build",
+    "build": "rm -fr packages/rtelite/dist; rm -fr packages/rtebind/dist; turbo build",
     "dev": "turbo dev",
     "semantic-release": "semantic-release",
     "lint": "turbo lint",
