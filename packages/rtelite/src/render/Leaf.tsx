@@ -1,13 +1,13 @@
-import type { RenderLeafProps } from "slate-react";
+import type { RenderCustomLeafProps } from "src/types";
 
 export default function LeafRender({
   attributes,
   children,
   leaf,
-}: RenderLeafProps) {
-  if (leaf.tag == "span") {
+}: RenderCustomLeafProps) {
+  if (leaf.text) {
     return <span {...attributes}>{children}</span>;
   }
 
-  return <div {...attributes}>{children}</div>;
+  return <span {...attributes} children={children} />;
 }

@@ -5,9 +5,12 @@
       "outputs": ["dist/**"]
     },
     "dev": {
-      "cache": false,
+      "cache": true,
       "persistent": true
     },
-    "type-check": {}
+    "type-check": {},
+    "rtelite#build": {
+      "dependsOn": ["rtebind#build"]
+    }
   }
 }

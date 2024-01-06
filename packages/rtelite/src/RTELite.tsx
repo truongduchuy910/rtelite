@@ -7,15 +7,16 @@ import {
   Slate,
   withReact,
 } from "slate-react";
-
 import ElementRender from "./render/Element";
 import LeafRender from "./render/Leaf";
-import type { RTELiteProps } from "./types";
+
+interface RTELiteProps {
+  initialValue?: any[];
+}
 
 export function RTELite(props: RTELiteProps) {
   const initialValue = props?.initialValue || [
     {
-      tag: "section",
       children: [{ tag: "span", text: "A line of text in a paragraph." }],
     },
   ];
@@ -37,6 +38,7 @@ export function RTELite(props: RTELiteProps) {
       <hr />
       <Slate editor={editor} initialValue={initialValue}>
         <Editable
+          className="rtelite"
           renderElement={renderElement}
           renderLeaf={renderLeaf}
           spellCheck

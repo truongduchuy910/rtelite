@@ -7,6 +7,6 @@ export default defineConfig({
   treeshake: false,
   dts: true,
   clean: true,
-  entryPoints: ["src/*.{ts,tsx,css}", "src/**/*.{ts,tsx,css}"],
+  entryPoints: ["src/*.{ts,tsx}"],
   format: ["cjs", "esm"],
 });
