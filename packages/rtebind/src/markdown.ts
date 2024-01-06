@@ -48,7 +48,7 @@ export class MdRoot implements Root {
         return { tag: "p", children };
 
       case "strong":
-        break;
+        return { tag: "strong", children };
 
       case "heading":
         return { tag: `h${node.depth}`, children };
@@ -62,7 +62,7 @@ export class MdRoot implements Root {
       case "list":
         break;
     }
-
+    console.error(node);
     throw new Error(`${node.type} is not implement to bind.`);
   }
 

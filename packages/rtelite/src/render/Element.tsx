@@ -32,6 +32,9 @@ export default function ElementRender({
   if (element.tag === "p") {
     return <p {...attributes}>{children}</p>;
   }
+  if (element.tag === "strong") {
+    return <strong {...attributes}>{children}</strong>;
+  }
 
   if (element.children) {
     return <section {...attributes}>{children}</section>;

@@ -9,9 +9,14 @@ import {
 } from "slate-react";
 import ElementRender from "./render/Element";
 import LeafRender from "./render/Leaf";
+import ButtonH1 from "./toolbar/H1";
+import ButtonH2 from "./toolbar/H2";
+import ButtonH3 from "./toolbar/H3";
+import ButtonBold from "./toolbar/Bold";
 
 interface RTELiteProps {
   initialValue?: any[];
+  toolbarCN?: string;
 }
 
 export function RTELite(props: RTELiteProps) {
@@ -35,17 +40,36 @@ export function RTELite(props: RTELiteProps) {
 
   return (
     <Fragment>
-      <hr />
       <Slate editor={editor} initialValue={initialValue}>
-        <Editable
-          className="rtelite"
-          renderElement={renderElement}
-          renderLeaf={renderLeaf}
-          spellCheck
-          autoFocus
-        />
+        <div style={{ position: "relative" }}>
+          <div
+            className={props?.toolbarCN}
+            style={{
+              paddingTop: 5,
+              paddingLeft: 7,
+              paddingRight: 7,
+              top: 8,
+              zIndex: 11,
+              position: "sticky",
+            }}
+          >
+            <ButtonH1 />
+            <ButtonH2 />
+            <ButtonH3 />
+            <ButtonBold />
+          </div>
+          <div>
+            <Editable
+              className="rtelite"
+              renderElement={renderElement}
+              renderLeaf={renderLeaf}
+              spellCheck
+              autoFocus
+            />
+            <hr />
+          </div>
+        </div>
       </Slate>
-      <hr />
     </Fragment>
   );
 }

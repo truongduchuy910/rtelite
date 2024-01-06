@@ -5,8 +5,8 @@ export default function LeafRender({
   children,
   leaf,
 }: RenderCustomLeafProps) {
-  if (leaf.text) {
-    return <span {...attributes}>{children}</span>;
+  if (leaf.tag === "strong") {
+    return <strong {...attributes}>{children}</strong>;
   }
 
   return <span {...attributes} children={children} />;

@@ -49,14 +49,15 @@ class Typography {
 
 /* https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax */
 type HeadingTag = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
-
+type StyleTag = "strong" | "em" | "del" | "sub" | "sup" | "u";
 export interface CustomText extends Typography, BaseText {
+  tag?: StyleTag;
   text: string;
 }
 
 export interface CustomElement extends Typography, BaseElement {
   /* HTML tag */
-  tag?: HeadingTag | "p";
+  tag?: HeadingTag | "p" | StyleTag;
   children: Array<CustomText | CustomElement>;
 }
 
