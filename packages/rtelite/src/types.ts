@@ -51,7 +51,7 @@ class Typography {
 type HeadingTag = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 type StyleTag = "strong" | "em" | "del" | "sub" | "sup" | "u";
 export interface CustomText extends Typography, BaseText {
-  tag?: StyleTag;
+  tag?: StyleTag | "span";
   text: string;
 }
 

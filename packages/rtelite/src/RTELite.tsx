@@ -9,10 +9,14 @@ import {
 } from "slate-react";
 import ElementRender from "./render/Element";
 import LeafRender from "./render/Leaf";
+import ButtonBold from "./toolbar/Bold";
 import ButtonH1 from "./toolbar/H1";
 import ButtonH2 from "./toolbar/H2";
 import ButtonH3 from "./toolbar/H3";
-import ButtonBold from "./toolbar/Bold";
+
+import ButtonH4 from "./toolbar/H4";
+import ButtonH5 from "./toolbar/H5";
+import ButtonH6 from "./toolbar/H6";
 
 interface RTELiteProps {
   initialValue?: any[];
