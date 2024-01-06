@@ -2,6 +2,23 @@
 
 Highly customisable rich text editor
 
+## Quickstart
+
+```ts
+import { Fragment } from "react";
+import { RTELite } from "rtelite";
+
+function App() {
+  return (
+    <Fragment>
+      <RTELite />
+    </Fragment>
+  );
+}
+
+export default App;
+```
+
 ### Why Slate?
 
 Why create Slate? Well... _(Beware: this section has a few of
