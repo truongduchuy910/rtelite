@@ -35,7 +35,7 @@ class Typography {
   weight?: "font-normal" | "font-bold";
 
   /* https://tailwindcss.com/docs/vertical-align */
-  align?: "left" | "center" | "right" | "justify";
+  align?: "align-left" | "align-center" | "align-right" | "align-justify";
 
   /* https://tailwindcss.com/docs/text-underline-offset */
   /* https://tailwindcss.com/docs/text-color */
@@ -51,13 +51,13 @@ class Typography {
 type HeadingTag = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 type StyleTag = "strong" | "em" | "del" | "sub" | "sup" | "u";
 export interface CustomText extends Typography, BaseText {
-  tag?: StyleTag | "span";
+  tag?: StyleTag | "span" | "code" | "pre";
   text: string;
 }
 
 export interface CustomElement extends Typography, BaseElement {
   /* HTML tag */
-  tag?: HeadingTag | "p" | StyleTag;
+  tag?: HeadingTag | "p" | "blockquote" | StyleTag | "html" | "pre";
   children: Array<CustomText | CustomElement>;
 }
 
